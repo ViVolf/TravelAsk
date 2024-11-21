@@ -1,0 +1,83 @@
+@use "default_variables" as *;
+
+#reviews {
+    position: relative;
+    width: $width;
+    height: $height_reviews;
+    background-color: white;
+
+    margin-top: 1.464vw;
+    box-sizing: border-box;
+
+    padding: 3% 3%;
+
+    #reviews-title {
+        font-size: $font_large;
+        line-height: 2.548vw;
+        font-weight: 900;
+        letter-spacing: 0.03em;
+    }
+
+    #reviews-container {
+        height: 80%;
+
+        margin-top: 2%;
+    }
+
+    #reviews-button {
+        position: absolute;
+        bottom: 7.5%;
+
+        width: 9.078vw;
+        height: 2.928vw;
+
+        background-color: transparent;
+        border: 0.15vw $color_red solid;
+
+        font-size: $font_medium;
+        color: $color_black;
+        font-weight: bolder;
+    }
+
+    .reviews-pagination {
+        position: absolute;
+        bottom: 8.5%;
+        right: 4.5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+            margin: 0 0.366vw;
+            width: 5px;
+            height: 5px;
+            background: $color_grey;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 8px;
+            height: 8px;
+
+            background-color: $color_red;
+        }
+    }
+
+    @media (max-width: 520px) {
+
+        .reviews-pagination {
+
+            .swiper-pagination-bullet {
+                width: 3px;
+                height: 3px;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+}

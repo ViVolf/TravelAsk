@@ -1,0 +1,44 @@
+@use "default_variables" as *;
+
+.message {
+    width: 100%;
+
+    display: flex;
+    column-gap: 4%;
+
+    padding: 4%;
+    box-sizing: border-box;
+
+
+    .message-avatar {
+        width: $avatar_size;
+        height: $avatar_size;
+
+        border-radius: 50%;
+    }
+
+    .message-values {
+        display: flex;
+        flex-direction: column;
+
+        .message-values-text {
+            font-size: $font_medium;
+            line-height: 1.757vw;
+            margin-bottom: 1vw;
+        }
+
+        .message-values-date {
+            font-family: "Roboto";
+            font-size: $font_small;
+            color: $color_grey;
+        }
+    }
+}
+
+.white-back {
+    background-color: transparent;
+}
+
+.grey-back {
+    background-color: $color_background;
+}

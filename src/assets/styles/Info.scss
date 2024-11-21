@@ -1,0 +1,45 @@
+@use "default_variables" as *;
+
+#info {
+    width: $width;
+    height: $height_info;
+    background-color: white;
+
+    display: flex;
+
+
+    margin-top: 8.053vw;
+
+    #barselona-pic {
+        height: 100%;
+    }
+
+    #barselona-text {
+        width: 50%;
+
+        padding: 12.5% 4%;
+
+            #barselona-text-title {
+                font-size: $font_large;
+                line-height: 2.548vw;
+                font-weight: 900;
+                letter-spacing: 0.03em;
+            }
+
+            #barselona-text-info {
+                font-size: $font_big;
+                line-height: 1.837vw;
+                font-weight: lighter;
+
+                margin: 5% 0 1.5% 0;
+            }
+
+            #barselona-text-button {
+                background-color: transparent;
+                border: none;
+                border-bottom: 0.25vw $color_red solid;
+
+                font-size: $font_big;
+            }
+    }
+}

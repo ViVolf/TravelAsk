@@ -1,0 +1,173 @@
+@use "default_variables" as *;
+
+#chat {
+    width: $width;
+    height: $height_chat;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 3.66vw;
+    margin-bottom: 9.81vw;
+
+    .line {
+        height: 55.49vw;
+        width: 0.146vw;
+    }
+
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .chat-title {
+            font-size: $font_large;
+            font-weight: bolder;
+            letter-spacing: 0.03em;
+        }
+
+        .chat-window {
+            width: 30.381vw;
+            height: 51.098vw;
+
+            display: flex;
+            flex-direction: column;
+
+            background-color: white;
+
+            .chat-head {
+                position: relative;
+
+                box-sizing: border-box;
+
+                width: 100%;
+                height: 14%;
+
+                padding: 6.5%;
+
+                border-bottom: 0.073vw #ECECEC solid;
+
+                display: flex;
+                column-gap: 3.5%;
+
+                .chat-head-avatar {
+                    width: $avatar_size;
+                    height: $avatar_size;
+
+                    border-radius: 50%;
+                }
+
+                .chat-head-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 50%;
+
+                    .chat-head-info-name {
+                        font-size: 1.318vw;
+                        font-weight: bolder;
+                    }
+
+                    .chat-head-info-other {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 2%;
+
+                        .flag {
+                            height: 0.732vw;
+                        }
+
+                        .chat-head-info-disc {
+                            font-size: 0.952vw;
+                            color: $color_red;
+                        }
+                    }
+                }
+
+                .chat-head-rating {
+                    position: absolute;
+                    right: 10%;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    .star {
+                        width: 0.878vw;
+                    }
+                }
+            }
+
+            .chat-body {
+                width: 100%;
+                height: 72%;
+
+                box-sizing: border-box;
+                padding: 0 5%;
+
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            .chat-body::-webkit-scrollbar {
+                width: 0.5vw;
+            }
+            
+            .chat-body::-webkit-scrollbar-thumb {
+                background: #FF4641;
+            }
+            
+            .chat-body::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+            
+            .chat-body::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            .chat-bottom {
+                width: 100%;
+                height: 14%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                box-sizing: border-box;
+                padding: 6.5%;
+
+                border-top: 0.073vw #ECECEC solid;
+
+                .chat-bottom-avatar {
+                    width: $avatar_size;
+                    height: $avatar_size;
+
+                    border-radius: 50%;
+                }
+
+                .chat-bottom-input {
+                    height: 100%;
+                    width: 65%;
+                    border: 0.073vw #ECECEC solid;
+
+                    font-size: $font_medium;
+
+                    padding-left: 5%;
+                }
+
+                .chat-bottom-input:focus {
+                    outline: none;
+                }
+
+                .chat-bottom-button {
+                    width: 1.611vw;
+                    height: 1.611vw;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                .chat-bottom-button:hover {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}

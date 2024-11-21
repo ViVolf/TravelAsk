@@ -1,0 +1,131 @@
+@use "default_variables" as *;
+
+.review {
+    height: 30.015vw;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    position: relative;
+
+    background-color: $color_background;
+
+    padding: 11% 10% 7.5% 10%;
+    box-sizing: border-box;
+
+    .review-head {
+        display: flex;
+        align-items: center;
+        column-gap: 5%;
+
+
+        .review-avatar {
+            width: 2.196vw;
+            height: 2.196vw;
+            border-radius: 50%;
+        }
+
+        .review-name {
+            font-size: $font_medium;
+        }
+    }
+
+    .review-title {
+        display: flex;
+        column-gap: 2%;
+
+        font-size: 0.952vw;
+        letter-spacing: 0.034vw;
+
+        color: $color_black;
+
+        .review-city {
+            color: $color_orange;
+            font-weight: bolder;
+        }
+    }
+
+    .review-text {
+        height: 43%;
+
+        font-family: "Roboto";
+        font-size: $font_medium;
+        line-height: 1.83vw;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @media (max-width: 1540px) {
+        .review-text {
+            height: 44.5%;
+        }
+    }
+
+    .review-galery {
+        display: flex;
+        height: 3.15vw;
+
+        .last {
+            position: relative;
+        }
+
+        .review-galery-container {
+            height: 100%;
+            width: 3.15vw;
+
+            margin-right: 0.4vw;
+
+            cursor: pointer;
+
+            .review-galery-img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .review-galery-number {
+                font-size: 1.245vw;
+                color: white;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: transparent;
+                z-index: 10;
+            }
+
+            .review-galery-blur {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.35);
+                z-index: 5;
+            }
+        }
+    }
+
+    .review-info {
+        position: absolute;
+        bottom: 7.5%;
+        width: 80%;
+
+        display: flex;
+        justify-content: space-between;
+        font-family: "Roboto";
+        font-size: $font_small;
+        color: $color_grey;
+
+        .review-like {
+            display: flex;
+            column-gap: 0.5vw;
+
+            .review-like-svg {
+                width: 1.025vw;
+                height: 1.171vw;
+            }
+        }
+    }
+}

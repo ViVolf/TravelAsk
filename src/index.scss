@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Kievit Pro";
+    font-style: normal;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Kievit Pro";
+    src: url('./assets/fonts/KievitPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('./assets/fonts/Roboto-Regular.ttf');
+}
