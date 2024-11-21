@@ -105,6 +105,10 @@
                 z-index: 5;
             }
         }
+
+        .review-galery-container:hover {
+            outline: 0.75px $color_orange solid;
+        }
     }
 
     .review-info {
